@@ -1,0 +1,44 @@
+{
+  "mcpServers": {
+    "context7": {
+      "httpUrl": "https://mcp.context7.com/mcp"
+    },
+    "Framelink Figma MCP": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "figma-developer-mcp",
+        "--figma-api-key=$FIGMA_PAT",
+        "--stdio"
+      ]
+    },
+  "github": {
+      "httpUrl": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "$GITHUB_PAT"
+      },
+      "timeout": 5000
+    },
+    "context7": {
+      "httpUrl": "https://mcp.context7.com/mcp"
+    },
+    "atlassian-mcp-server": {
+      "url": "https://mcp.atlassian.com/v1/sse",
+      "type": "http",
+      "inputs": []
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "/"
+      }
+    },
+  "ui": {
+    "theme": "Shades Of Purple"
+  }
+  }
+}
