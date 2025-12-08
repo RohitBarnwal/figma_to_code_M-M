@@ -68,7 +68,34 @@ If it dumps certificate fields → file is valid.
 
 # ✅ **STEP 3 — Verify Node.js Can Load the Certificate**
 
-### **3.1 Set the env variable (secure way)**
+✔️ Set Environment Variables via Windows Environment Variables UI
+
+This is the most stable and reliable way to configure:
+
+NODE_EXTRA_CA_CERTS
+
+HTTPS_PROXY
+
+HTTP_PROXY (if needed)
+
+Steps:
+
+Open Start Menu → type Environment Variables → open
+
+In User variables, click New
+
+Add:
+
+Name:
+
+NODE_EXTRA_CA_CERTS
+
+
+Value:
+
+C:\certs\zscaler-root.pem
+Optional Env variable 
+### **3.1 Set the env variable (optional)** 
 
 ```powershell
 setx NODE_EXTRA_CA_CERTS "C:\certs\zscaler-root.pem"
